@@ -4,11 +4,19 @@
 print "Which suburb do you live in? "
 suburb = gets.chomp.downcase
 
-if suburb == 'chatswood' || suburb == 'newtown'
+# if suburb == 'chatswood' || suburb == 'newtown'
+#   puts "Good nomming"
+# elsif suburb == 'palm beach' || suburb == 'avalon'
+#   puts "Long commute buddy"
+# else
+#   puts "I'm sure that's a very nice place"
+# end
+
+case suburb
+when "chatswood", "newtown"
   puts "Good nomming"
-elsif suburb == 'palm beach' || suburb == 'avalon'
-  puts "Long commute buddy"
+when "palm beach", "avalon"
+  puts "Long commute"
 else
   puts "I'm sure that's a very nice place"
 end
-
