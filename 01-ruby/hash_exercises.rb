@@ -60,8 +60,6 @@ users = {
   },
 }
 
-binding.pry
-
 # 1. How would you access Jonathan's Twitter handle (i.e. the string `"tronathan"`)?
 p users["Jonathan"][:twitter]
 # 1. How would you add the number `7` to Erik's favorite numbers?
@@ -72,14 +70,9 @@ users["Joel"] = { :twitter=>"edwardawkward", :favorite_numbers=>[4] }
 p users["Erik"][:favorite_numbers]
 # 1. How would you return the smallest of Erik's favorite numbers?
 p users["Erik"][:favorite_numbers].min
-
 # 1. How would you return an array of Anil's favorite numbers that are also even?
 p users["Anil"][:favorite_numbers].select { |n| n.even? }
-
-# Remind me to do these tomorrow
 # 1. How would you return an array of the favorite numbers common to all users?
+users["Erik"][:favorite_numbers] & users["Anil"][:favorite_numbers] & users["Jonathan"][:favorite_numbers]
 # 1. How would you return an array containing all users' favorite numbers, sorted, and excluding duplicates?
-
-
-
-
+(users["Erik"][:favorite_numbers] + users["Anil"][:favorite_numbers] + users["Jonathan"][:favorite_numbers]).uniq.sort
