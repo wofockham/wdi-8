@@ -34,6 +34,28 @@ plays = {
   :tragedies => ['Hamlet', 'Macbeth']
 }
 
+###############################################################################
+
+class MarxBrother
+  attr_accessor :name, :instrument, :vice
+
+  def initialize(name, instrument, vice)
+    @name = name
+    @instrument = instrument
+    @vice = vice
+  end
+
+  def play
+    "#{ @name } Marx plays the #{ @instrument }."
+  end
+
+  def enjoy
+    "#{ @name } Marx enjoys #{ @vice }."
+  end
+end
+
+groucho = MarxBrother.new('Groucho', 'guitar', 'cigars')
+
 require 'pry'
 binding.pry
 
