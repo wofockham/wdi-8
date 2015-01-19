@@ -1,1 +1,11 @@
-hello world
+<h2>Please enter a stock symbol</h2>
+<form action="/lookup">
+  <input name="stock_symbol" placeholder="GOOG">
+  <button>Get quote</button>
+</form>
+
+<% if @price && @price > 0 %>
+  <p>
+    Last trade for <%= @symbol %> was $<%= @price %>
+  </p>
+<% end %>
