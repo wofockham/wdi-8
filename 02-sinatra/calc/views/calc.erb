@@ -1,10 +1,10 @@
 <form action="/calc">
+  <input name="first" placeholder="First number" value="<%= params[:first] %>">
+  <input name="operator" placeholder="Mathematical operator" value="<%= params[:operator] %>">
+  <input name="second" placeholder="Second number" value="<%= params[:second] %>">
 
+  <button>Calculate</button>
 </form>
-
-<p>x: <%= params[:x] %></p>
-
-<p>y: <%= params[:y] %></p>
 
 <h1>The result is:</h1>
 
