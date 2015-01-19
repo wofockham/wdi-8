@@ -26,9 +26,22 @@ get '/greeting/:first/:last/:age' do
 end
 
 get '/multiply/:x/:y' do
-  result = params[:x] * params[:y]
+  result = params[:x].to_f * params[:y].to_f
   "The result is #{ result }"
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
