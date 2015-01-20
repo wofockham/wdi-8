@@ -1,0 +1,21 @@
+.container {
+  max-width: 960px;
+  margin: auto;
+  border: 1px solid black;
+}
+
+header h1 {
+  color: green;
+}
+
+article {
+  background-color: grey;
+  width: 79%; /* relative width */
+  display: inline-block;
+}
+
+aside {
+  background-color: pink;
+  width: 19%;
+  display: inline-block;
+}
