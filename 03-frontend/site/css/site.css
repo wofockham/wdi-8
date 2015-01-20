@@ -1,7 +1,7 @@
 .container {
   max-width: 960px;
   margin: auto;
-  border: 1px solid black;
+  padding: 1em;
 }
 
 header h1 {
@@ -9,13 +9,32 @@ header h1 {
 }
 
 article {
-  background-color: grey;
   width: 79%; /* relative width */
   display: inline-block;
 }
 
 aside {
-  background-color: pink;
   width: 19%;
   display: inline-block;
+  vertical-align: top;
+}
+
+.outer {
+  width: 50%;
+  margin: auto;
+  background-color: #ccc;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.inner {
+  background-color: #aaa;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.outer:hover .inner {
+  background-color: #ddd;
+  color: black;
 }
