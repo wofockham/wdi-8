@@ -1,0 +1,87 @@
+<h2>GET example</h2>
+
+<form action="/process">
+
+  <p>
+    <label for="query">Thing to search for</label>
+    <input type="search" name="query" id="query" placeholder="Hotdogs">
+  </p>
+
+  <p>
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name" placeholder="Abraham" autofocus>
+  </p>
+
+  <p>
+    <label for="age">Age: </label>
+    <input type="number" name="age" id="age" placeholder="101">
+  </p>
+
+  <p>
+    <label for="booking_date">Booking date: </label>
+    <input type="date" name="booking_date" id="booking_date">
+  </p>
+
+  <p>
+    <label for="myspace_page">Myspace page: </label>
+    <input type="url" name="myspace_page" id="myspace_page">
+  </p>
+
+  <p>
+    <label for="address">Address: </label>
+    <input type="email" name="address" id="address">
+  </p>
+
+  <p>
+    <label for="avatar">Avatar: </label>
+    <input type="file" name="avatar" id="avatar">
+  </p>
+
+  <p>
+    <label for="letter_home">Letter to home:</label>
+    <textarea name="letter_home" id="letter_home" placeholder="Dear mom and dad"></textarea>
+  </p>
+
+  <p>
+    <label for="bros">Favourite Marx Brother:</label>
+    <select name="bros" id="bros">
+      <option value="groucho">Groucho Marx</option>
+      <option value="harpo" selected>Harpo Marx</option>
+      <option value="chico">Chico Marx</option>
+      <option value="zeppo" disabled>Zeppo Marx</option>
+    </select>
+  </p>
+
+  <p>
+    Select your vices:
+    <label for="cigars">Cigars</label>
+    <input id="cigars" name="vices[]" type="checkbox" value="cigars">
+
+    <label for="wine">Wine</label>
+    <input id="wine" name="vices[]" type="checkbox" value="wine">
+
+    <label for="heroin">Heroin</label>
+    <input id="heroin" name="vices[]" type="checkbox" value="heroin">
+  </p>
+
+   <p>
+    Select your favourite vice:
+    <label for="cigars">Cigars</label>
+    <input id="cigars" name="fave_vice" type="radio" value="cigars">
+
+    <label for="wine">Wine</label>
+    <input id="wine" name="fave_vice" type="radio" value="wine">
+
+    <label for="heroin">Heroin</label>
+    <input id="heroin" name="fave_vice" type="radio" value="heroin">
+  </p>
+
+  <button>Submit</button>
+</form>
+
+
+
+
+
+
+
