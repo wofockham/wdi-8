@@ -1,0 +1,32 @@
+body {
+  background-color: linen;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.display-none {
+  display: none;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+.invisible {
+  display: none;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.display-block {
+  display: block;
+}
+
+
+
+
