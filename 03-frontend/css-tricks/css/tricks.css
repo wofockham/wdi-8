@@ -27,6 +27,46 @@ body {
   display: block;
 }
 
+.display-inline-block {
+  border: 1px dotted orange;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+}
+
+.box {
+  width: 15em;
+  height: 15em;
+  border: 1px solid blue;
+  text-align: center;
+  line-height: 15em;
+}
+
+.tiny-box {
+  width: 5em;
+  height: 5em;
+  border: 1px solid green;
+  background-color: white;
+}
+
+.position-static {
+  position: static;
+}
 
 
+.position-fixed {
+  position: fixed;
+  top: 5em;
+  right: 5em;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+  top: 5em;
+  right: 5em;
+}
 
