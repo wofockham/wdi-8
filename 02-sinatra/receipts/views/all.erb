@@ -1,1 +1,7 @@
-<%= @receipts.inspect %>
+<% @receipts.each do |receipt| %>
+  <div class="receipt">
+    <p><strong>Client</strong>: <%= receipt[:client] %></p>
+    <p><strong>Service</strong>: <%= receipt[:service] %></p>
+    <p><strong>Cost</strong>: <%= receipt[:cost] %></p>
+  </div>
+<% end %>

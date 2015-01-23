@@ -18,7 +18,13 @@ get '/all' do
   @receipts = []
 
   db.each do |line|
-    @receipts << line.split(',')
+    info = line.split(',')
+    receipt = {
+      :client => info[0],
+      :service => info[1],
+      :cost => info[2]
+    }
+    @receipts << receipt
   end
 
   db.close
