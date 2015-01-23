@@ -1,2 +1,6 @@
 Brad,42,m
-Angie,14,f
+Angela,14,f
+Craigsy,27,male
+Jonesy,25,other
+Riley,35,male
+Groucho, 65, male
