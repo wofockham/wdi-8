@@ -18,7 +18,13 @@ get '/butterflies/new' do
 end
 
 post '/butterflies' do
-  "This seems to be working"
+  query = "INSERT INTO butterflies (name, family, image)
+           VALUES ('#{params["name"]}', '#{params["family"]}',
+                   '#{params["image"]}')"
+
+  db_query(query)
+
+  redirect to('/butterflies')
 end
 
 get '/butterflies/:id' do
