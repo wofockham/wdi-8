@@ -4,12 +4,21 @@ require 'sqlite3'
 
 require 'pry'
 
+before do
+  @families = db_query("SELECT DISTINCT(family) FROM butterflies")
+end
+
 get '/' do
   erb :home
 end
 
 get '/butterflies' do
   @butterflies = db_query("SELECT * FROM butterflies")
+  erb :index
+end
+
+get '/butterflies/family/:name' do
+  @butterflies = db_query("SELECT * FROM butterflies WHERE family='#{params[:name]}'")
   erb :index
 end
 

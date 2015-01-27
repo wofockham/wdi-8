@@ -15,6 +15,16 @@
         <li><a href="/butterflies">Butterflies</a></li>
         <li><a href="/butterflies/new">New butterfly</a></li>
       </ul>
+
+      <ul>
+        <% @families.each do |group| %>
+          <li>
+            <a href="/butterflies/family/<%= group["family"] %>">
+              <%= group["family"] %>
+            </a>
+          </li>
+        <% end %>
+      </ul>
     </nav>
 
     <%= yield %>
