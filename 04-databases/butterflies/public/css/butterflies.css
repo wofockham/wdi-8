@@ -6,3 +6,30 @@ body {
   max-width: 960px;
   margin: auto;
 }
+
+img.butterfly {
+  max-width: 100%;
+}
+
+.controls a {
+  color: orange;
+}
+
+nav {
+  background-color: #888;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  text-align: right;
+}
+
+nav ul {
+  padding-left: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  color: white;
+}

@@ -36,9 +36,31 @@ get '/butterflies/:id' do
   erb :show
 end
 
+get '/butterflies/:id/delete' do
+  id = params[:id]
 
+  db_query("DELETE FROM butterflies WHERE id = #{ id }")
 
+  redirect to('/butterflies')
+end
 
+get '/butterflies/:id/edit' do
+  id = params[:id]
+
+  @butterfly = db_query("SELECT * FROM butterflies WHERE id = #{ id }").first
+
+  erb :edit
+end
+
+post '/butterflies/:id' do
+  id = params[:id]
+
+  query = "UPDATE butterflies SET name='#{params["name"]}', family='#{params["family"]}', image='#{params["image"]}' WHERE id = #{id}"
+
+  db_query(query)
+
+  redirect to('/butterflies/' + id)
+end
 
 def db_query(sql)
   db = SQLite3::Database.new "butterflies.db"
