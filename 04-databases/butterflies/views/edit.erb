@@ -1,14 +1,14 @@
 <h2>Edit butterfly</h2>
 
-<form action="/butterflies/<%= @butterfly["id"] %>" method="post">
+<form action="/butterflies/<%= @butterfly.id %>" method="post">
   <label for="name">Name:</label>
-  <input id="name" name="name" value="<%= @butterfly["name"] %>">
+  <input id="name" name="name" value="<%= @butterfly.name %>">
 
   <label for="family">Family:</label>
-  <input id="family" name="family" value="<%= @butterfly["family"] %>">
+  <input id="family" name="family" value="<%= @butterfly.family %>">
 
   <label for="image">Image:</label>
-  <input id="image" name="image" type="url" value="<%= @butterfly["image"] %>">
+  <input id="image" name="image" type="url" value="<%= @butterfly.image %>">
 
   <input type="submit" value="Update butterfly">
 </form>
