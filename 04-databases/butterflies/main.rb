@@ -114,7 +114,7 @@ end
 post '/plants/:id' do
   plant = Plant.find params[:id]
   plant.update :name => params[:name], :image => params[:image]
-  redirect to("/plants/#{ plant.id }")
+  redirect to("/plants/#{ plant.id }") # Return the user to the show page.
 end
 
 
