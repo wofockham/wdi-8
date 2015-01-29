@@ -12,6 +12,7 @@ ActiveRecord::Base.establish_connection(
 )
 
 require_relative 'butterfly'
+require_relative 'plant'
 
 before do
   @families = Butterfly.select(:family).uniq
@@ -31,7 +32,7 @@ get '/' do
 end
 
 get '/butterflies' do
-  @butterflies = Butterfly.order(:name)
+  @butterflies = Butterfly.all.order(:name)
   erb :index
 end
 
@@ -79,5 +80,28 @@ post '/butterflies/:id' do
   butterfly.save
   redirect to("/butterflies/#{ butterfly.id }")
 end
+
+get '/plants' do
+  @plants = Plant.all.order(:name)
+  erb :plants_index
+end
+
+get '/plants/:id' do
+  @plant = Plant.find params[:id]
+  erb :plants_show
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
