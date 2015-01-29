@@ -2,6 +2,13 @@
 <p>Family: <em><%= @butterfly.family %></em></p>
 <img class="butterfly" src="<%= @butterfly.image %>">
 
+<% if @butterfly.plant %>
+  <h2>Plant</h2>
+  <a href="/plants/<%= @butterfly.plant.id %>">
+    <%= @butterfly.plant.name %>
+  </a>
+<% end %>
+
 <div class="controls">
   <a href="/butterflies/<%= @butterfly.id %>/delete">Delete</a>
   <a href="/butterflies/<%= @butterfly.id %>/edit">Edit</a>

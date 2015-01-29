@@ -10,5 +10,12 @@
   <label for="image">Image:</label>
   <input id="image" name="image" type="url">
 
+  <label for="plant_id">Larval plant:</label>
+  <select name="plant_id" id="plant_id">
+    <% Plant.all.each do |plant| %>
+      <option><%= plant.name %></option>
+    <% end %>
+  </select>
+
   <input type="submit" value="Create butterfly">
 </form>
