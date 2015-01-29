@@ -6,19 +6,25 @@ require 'pry'
 
 ActiveRecord::Base.logger = Logger.new(STDERR) # Show SQL in the terminal.
 
+# Explains to ActiveRecord where to find the database.
 ActiveRecord::Base.establish_connection(
   :adapter => 'sqlite3',
   :database => 'butterflies.db'
 )
 
+# Include our models.
 require_relative 'butterfly'
 require_relative 'plant'
 
+# Before filter runs before any and every request.
 before do
+  # The layout requires this variable to be set.
   @families = Butterfly.select(:family).uniq
 end
 
+# Ditto for the after filter.
 after do
+  # This stops the database running out of connections.
   ActiveRecord::Base.connection.close
 end
 
@@ -27,25 +33,31 @@ get '/pry' do
   binding.pry
 end
 
+# Homepage.
 get '/' do
   erb :home
 end
 
+# Butterflies index.
 get '/butterflies' do
   @butterflies = Butterfly.all.order(:name)
   erb :index
 end
 
+# Butterflies within a single family.
 get '/butterflies/family/:name' do
   @butterflies = Butterfly.where(:family => params[:name])
-  erb :index
+  erb :index # Same view as the index but only for a particular family.
 end
 
 get '/butterflies/new' do
   erb :new
 end
 
+# CREATE a new butterfly
 post '/butterflies' do
+  # Instantiate a new butterfly in memory, set its attributes
+  # and save (persist) it to the database.
   butterfly = Butterfly.new
   butterfly.name = params[:name]
   butterfly.family = params[:family]
@@ -53,18 +65,20 @@ post '/butterflies' do
 
   butterfly.save
 
-  redirect to('/butterflies')
+  redirect to("/butterflies/#{ butterfly.id }") # Show the user the new butterfly.
 end
 
+# SHOW a butterfly
 get '/butterflies/:id' do
-  @butterfly = Butterfly.find params[:id]
+  @butterfly = Butterfly.find params[:id] # The ID is in the URL.
   erb :show
 end
 
+# This is naughty, I was lazy, sorry: POST would be better.
 get '/butterflies/:id/delete' do
-  butterfly = Butterfly.find params[:id]
-  butterfly.destroy
-  redirect to('/butterflies')
+  butterfly = Butterfly.find params[:id] # The ID is in the URL.
+  butterfly.destroy # Delete the butterfly from the database.
+  redirect to('/butterflies') # Return the user to the index.
 end
 
 get '/butterflies/:id/edit' do
@@ -72,7 +86,10 @@ get '/butterflies/:id/edit' do
   erb :edit
 end
 
+# UPDATE butterfly.
 post '/butterflies/:id' do
+  # Retrieve an existing butterfly, update its attributes and save (persist)
+  # to the database.
   butterfly = Butterfly.find params[:id]
   butterfly.name = params[:name]
   butterfly.family = params[:family]
@@ -116,13 +133,5 @@ post '/plants/:id' do
   plant.update :name => params[:name], :image => params[:image]
   redirect to("/plants/#{ plant.id }") # Return the user to the show page.
 end
-
-
-
-
-
-
-
-
 
 
