@@ -1,0 +1,14 @@
+<form action="/calc">
+  <input name="first" placeholder="First number" value="<%= params[:first] %>">
+  <input name="operator" placeholder="Mathematical operator" value="<%= params[:operator] %>">
+  <input name="second" placeholder="Second number" value="<%= params[:second] %>">
+
+  <button>Calculate</button>
+</form>
+
+<h1>The result is:</h1>
+
+<em><%= @result %></em>
+
+<p>Thank you for using Less Crappy Calc</p>
+
