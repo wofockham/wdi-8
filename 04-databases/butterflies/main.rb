@@ -95,12 +95,27 @@ get '/plants/:id' do
   erb :plants_show
 end
 
+post '/plants' do
+  Plant.create :name => params[:name], :image => params[:image]
+  redirect to('/plants')
+end
 
+get '/plants/:id/delete' do
+  plant = Plant.find params[:id]
+  plant.destroy
+  redirect to('/plants')
+end
 
+get '/plants/:id/edit' do
+  @plant = Plant.find params[:id]
+  erb :plants_edit
+end
 
-
-
-
+post '/plants/:id' do
+  plant = Plant.find params[:id]
+  plant.update :name => params[:name], :image => params[:image]
+  redirect to("/plants/#{ plant.id }")
+end
 
 
 

@@ -7,8 +7,10 @@ body {
   margin: auto;
 }
 
-img.butterfly {
+img.butterfly, img.plant {
   max-width: 100%;
+  border-radius: 1em;
+  border: 1em solid black;
 }
 
 .controls a {
