@@ -12,9 +12,13 @@
 
   <label for="plant_id">Larval plant:</label>
   <select name="plant_id" id="plant_id">
+
+    <option></option><!-- Blank to allow "none" option -->
+
     <% Plant.all.each do |plant| %>
-      <option><%= plant.name %></option>
+      <option value="<%= plant.id %>"><%= plant.name %></option>
     <% end %>
+
   </select>
 
   <input type="submit" value="Create butterfly">

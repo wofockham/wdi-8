@@ -10,5 +10,16 @@
   <label for="image">Image:</label>
   <input id="image" name="image" type="url" value="<%= @butterfly.image %>">
 
+  <label for="plant_id">Larval plant:</label>
+  <select name="plant_id" id="plant_id">
+
+    <option></option>
+
+    <% Plant.all.each do |plant| %>
+      <option <%= "selected" if plant.id == @butterfly.plant_id %> value="<%= plant.id %>"><%= plant.name %></option>
+    <% end %>
+
+  </select>
+
   <input type="submit" value="Update butterfly">
 </form>
