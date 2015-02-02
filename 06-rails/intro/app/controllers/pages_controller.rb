@@ -9,4 +9,7 @@ class PagesController < ApplicationController
   def faq
   end
 
+  def cute
+  end
+
 end

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/home' => 'pages#home'
   get '/about' => 'pages#about'
   get '/faq' => 'pages#faq'
+  get '/cute' => 'pages#cute'
 
   # CRUD for butterflies:
   get '/butterflies' => 'butterflies#index'
