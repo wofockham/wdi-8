@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
   get '/auto/:colour' => 'auto#colour'
   get '/auto/:hp/:torque' => 'auto#engine'
+
+  get '/calc/:x/:y/:operator' => 'calc#calculate'
 end
