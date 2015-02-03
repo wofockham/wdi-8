@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+
   def home
   end
 
@@ -9,6 +10,10 @@ class PagesController < ApplicationController
   end
 
   def text
+    @numbers = (1..20).to_a
+    @person_count_a = 1
+    @person_count_b = 2
+    @story = "A very assessment long long long long long long time ago in a galaxy far far far away"
   end
 
   def assets
@@ -16,4 +21,5 @@ class PagesController < ApplicationController
 
   def url
   end
+
 end
