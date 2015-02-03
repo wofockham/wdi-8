@@ -1,0 +1,24 @@
+<form action="<%= planet_path(@planet.id) %>" method="post">
+  <label for="name">Name: </label>
+  <input id="name" name="planet[name]" value="<%= @planet.name %>" autofocus>
+
+  <label for="image">Image: </label>
+  <input type="url" id="image" name="planet[image]" value="<%= @planet.image %>">
+
+  <label for="orbit">Orbit: </label>
+  <input type="number" id="orbit" name="planet[orbit]" value="<%= @planet.orbit %>">
+
+  <label for="mass">Mass: </label>
+  <input type="number" id="mass" name="planet[mass]" value="<%= @planet.mass %>">
+
+  <label for="diameter">Diameter: </label>
+  <input type="number" id="diameter" name="planet[diameter]" value="<%= @planet.diameter %>">
+
+  <label for="distance">Distance: </label>
+  <input type="number" id="distance" name="planet[distance]" value="<%= @planet.distance %>">
+
+  <label for="moons">Moons: </label>
+  <input type="number" id="moons" name="planet[moons]" value="<%= @planet.moons %>">
+
+  <button>update planet!</button>
+</form>

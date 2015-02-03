@@ -3,7 +3,7 @@
 <ul>
   <% @planets.each do |planet| %>
     <li>
-      <%= planet.name %>
+      <%= link_to(planet.name, planet_path(planet.id)) %> has <%= pluralize(planet.moons, 'moon') %>.
     </li>
   <% end %>
 </ul>
