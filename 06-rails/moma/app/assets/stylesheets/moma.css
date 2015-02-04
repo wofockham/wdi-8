@@ -1,0 +1,30 @@
+html, body {
+  margin: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+.portrait {
+  max-height: 75vh;
+}
+
+.thumb {
+  max-width: 10em;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav {
+  text-align: right;
+  background-color: #ccc;
+  padding: 1em;
+}
+
+nav a {
+  color: black;
+}
