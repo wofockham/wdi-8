@@ -1,7 +1,10 @@
 <h1><%= @artist.name %></h1>
+
 <p>
+  <%= link_to 'Edit artist', edit_artist_path(@artist) %>
   <%= link_to 'Delete artist', @artist, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
 </p>
+
 <%= image_tag @artist.image, :class => 'portrait' %>
 <ul>
   <li>Nationality: <%= @artist.nationality %></li>

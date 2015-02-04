@@ -1,19 +1,2 @@
 <h1>New Artist</h1>
-<%= form_for @artist do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name, :autofocus => true %>
-
-  <%= f.label :nationality %>
-  <%= f.text_field :nationality %>
-
-  <%= f.label :dob, "Date of birth" %>
-  <%= f.text_field :dob %>
-
-  <%= f.label :period %>
-  <%= f.text_field :period %>
-
-  <%= f.label :image %>
-  <%= f.url_field :image %>
-
-  <%= f.submit  %>
-<% end %>
+<%= render :partial => 'form' %>

@@ -1,5 +1,6 @@
 <h1><%= @work.title %></h1>
 <p>
+  <%= link_to 'Edit work', edit_work_path(@work) %>
   <%= link_to 'Delete work', @work, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
 </p>
 <ul>
