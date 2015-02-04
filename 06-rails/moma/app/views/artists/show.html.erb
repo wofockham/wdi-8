@@ -11,3 +11,11 @@
   <li>Date of birth: <%= @artist.dob.strftime('%A %B %e, %Y') %></li>
   <li>Period: <%= @artist.period %></li>
 </ul>
+
+<% if @artist.works.any? %>
+  <h2>Works</h2>
+<% end %>
+
+<% @artist.works.each do |work| %>
+  <%= link_to(image_tag(work.image, :class => 'thumb'), work) %>
+<% end %>

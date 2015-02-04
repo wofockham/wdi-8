@@ -4,6 +4,9 @@
   <%= link_to 'Delete work', @work, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
 </p>
 <ul>
+  <% if @work.artist %>
+    <li>Artist: <%= link_to(@work.artist.name, @work.artist) %></li>
+  <% end %>
   <li>Year: <%= @work.year %></li>
   <li>Medium: <%= @work.medium %></li>
   <li>Style: <%= @work.style %></li>
