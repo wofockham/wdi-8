@@ -1,2 +1,19 @@
-<h1>Works#new</h1>
-<p>Find me in app/views/works/new.html.erb</p>
+<h1>New Work</h1>
+<%= form_for @work do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, :autofocus => true %>
+
+  <%= f.label :year %>
+  <%= f.text_field :year %>
+
+  <%= f.label :medium %>
+  <%= f.text_field :medium %>
+
+  <%= f.label :style %>
+  <%= f.text_field :style %>
+
+  <%= f.label :image %>
+  <%= f.url_field :image %>
+
+  <%= f.submit %>
+<% end %>

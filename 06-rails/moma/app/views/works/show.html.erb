@@ -1,2 +1,10 @@
-<h1>Works#show</h1>
-<p>Find me in app/views/works/show.html.erb</p>
+<h1><%= @work.title %></h1>
+<p>
+  <%= link_to 'Delete work', @work, :method => 'delete', :data => { :confirm => "Are you sure?" } %>
+</p>
+<ul>
+  <li>Year: <%= @work.year %></li>
+  <li>Medium: <%= @work.medium %></li>
+  <li>Style: <%= @work.style %></li>
+</ul>
+<%= image_tag(@work.image, :class => 'work') %>
