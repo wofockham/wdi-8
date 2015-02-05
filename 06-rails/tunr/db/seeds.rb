@@ -21,9 +21,9 @@ r1 = Artist.create(:name => 'Slint')
 r2 = Artist.create(:name => 'Arvo Part')
 r3 = Artist.create(:name => 'Tortoise')
 
-u1 = User.create(:name => 'Marty')
-u2 = User.create(:name => 'Sam')
-u3 = User.create(:name => 'Miriam')
+u1 = User.create(:name => 'Marty', :password => 'chicken', :password_confirmation => 'chicken')
+u2 = User.create(:name => 'Sam', :password => 'chicken', :password_confirmation => 'chicken')
+u3 = User.create(:name => 'Miriam', :password => 'chicken', :password_confirmation => 'chicken')
 
 m1 = Mixtape.create(:name => 'Code jams')
 m2 = Mixtape.create(:name => 'Morning Music')
