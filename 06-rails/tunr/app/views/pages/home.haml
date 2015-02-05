@@ -1,0 +1,20 @@
+
+%h1.x#y Intro to HAML
+
+%strong= 2 ** 64
+
+%input.form-input{:placeholder => 'Your message here', :autofocus => true}
+
+<input class="form-input" placeholder="Your message here">
+
+
+%div#content
+  %div.left.column
+    %h2 Welcome to our site
+    %p Print information
+  %div.right.column Partial here
+
+- (1..50).each do |n|
+  %h1= n
+
+%h1 all done
