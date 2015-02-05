@@ -29,3 +29,27 @@ m1 = Mixtape.create(:name => 'Code jams')
 m2 = Mixtape.create(:name => 'Morning Music')
 m3 = Mixtape.create(:name => 'Stupid Everything')
 
+# Associate songs and artists:
+r1.songs << s1
+r3.songs = [s2]
+s3.artist = r2
+
+# Associate songs and genres:
+g1.songs << s1
+g2.songs = [s2]
+s3.genres << g3
+
+# Associates songs and albums:
+s1.album = a1
+s2.album = a2
+a3.songs << s3
+
+# Associate songs and mixtapes:
+m1.songs = [s1, s2, s3]
+m2.songs << s1 << s2
+m3.songs << s3
+
+# Associate mixtapes and users:
+u1.mixtapes << m1
+m2.user = u2
+m3.user = u3
