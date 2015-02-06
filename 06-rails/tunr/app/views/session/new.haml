@@ -1,3 +1,5 @@
+%h2= flash[:error] if flash[:error].present?
+
 %h1 Log in
 = form_tag login_path do
   = label_tag :username
