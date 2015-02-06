@@ -8,14 +8,9 @@
 </head>
 <body>
 
-<h1>Welcome <%= @current_user.try(:name) %></h1>
-
 <nav>
   <ul>
-    <li><%= link_to('Home', root_path) %></li>
-    <li><%= link_to('Sign up', new_user_path) %></li>
-    <li><%= link_to('Log in', login_path) %></li>
-    <li><%= link_to('Sign out', login_path, :method => :delete) %></li>
+    <%== nav_menu %>
   </ul>
 </nav>
 
