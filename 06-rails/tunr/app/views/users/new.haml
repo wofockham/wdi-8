@@ -6,13 +6,14 @@
       %li= msg
 
 = form_for @user do |f|
-  = f.label :name
-  = f.text_field :name, :autofocus => true, :required => true
+  %div.form-group
+    = f.label :name
+    = f.text_field :name, :autofocus => true, :required => true, :class => 'form-control'
 
-  = f.label :password
-  = f.password_field :password
+    = f.label :password
+    = f.password_field :password, :class => 'form-control'
 
-  = f.label :password_confirmation
-  = f.password_field :password_confirmation
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation, :class => 'form-control'
 
-  = f.submit "Sign up"
+    = f.submit "Sign up"
