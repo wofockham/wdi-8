@@ -9,11 +9,11 @@
   %div.form-group
     = f.label :name
     = f.text_field :name, :autofocus => true, :required => true, :class => 'form-control'
-
+  %div.form-group
     = f.label :password
     = f.password_field :password, :class => 'form-control'
-
+  %div.form-group
     = f.label :password_confirmation
     = f.password_field :password_confirmation, :class => 'form-control'
-
-    = f.submit "Sign up"
+  %div.form-group
+    = f.submit "Sign up", :class => 'btn btn-primary'
