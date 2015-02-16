@@ -55,7 +55,7 @@ console.log(assignGrade(45));
 
 // Exercise 4: Pluralizer
 var pluralizer = function(count, noun) {
-  if (count === 0) {
+  if (count === 1) {
     return count + ' ' + noun;
   } else {
     return count + ' ' + noun + 's';
@@ -65,11 +65,3 @@ var pluralizer = function(count, noun) {
 console.log(pluralizer(1, 'dog'));
 console.log(pluralizer(0, 'dog'));
 console.log(pluralizer(1001, 'dalmatian'));
-
-
-
-
-
-
-
-
