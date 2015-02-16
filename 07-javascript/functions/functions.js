@@ -1,7 +1,7 @@
 // Exercise 1: Fortune Teller
 
 var tellFortune = function (numChildren, partnerName, geoLocation, job) {
-  console.log('You will be a ' + job + ' in ' + geoLocation + ', and married to ' + partnerName + ' with ' + numChildren + ' kids.');
+  return('You will be a ' + job + ' in ' + geoLocation + ', and married to ' + partnerName + ' with ' + numChildren + ' kids.');
 };
 
 tellFortune(4, 'Hooch', 'Seattle', 'Dental Hygienest');
@@ -22,7 +22,7 @@ calculateAge(1980, 2015);
 
 // Bonus version:
 var calculateAgeDynamic = function (birthYear) {
-  currentYear = (new Date()).getFullYear();
+  var currentYear = (new Date()).getFullYear();
   var postBirthdayAge = currentYear - birthYear;
   var preBirthdayAge = postBirthdayAge - 1;
   console.log('You are either ' + preBirthdayAge + ' or ' + postBirthdayAge);
@@ -57,6 +57,7 @@ var calcArea = function(radius) {
 };
 
 calcCircumference(25);
+calcCircumference(100);
 calcArea(25);
 
 
