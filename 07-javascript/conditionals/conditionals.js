@@ -19,9 +19,9 @@ console.log("The greater number of " + a + " and " + b + " is " + greaterNum(a, 
 
 // Exercise 2: Hello World
 var helloWorld = function (country) {
-  if (country == 'es') {
+  if (country === 'es') {
     return 'Hola, Mundo';
-  } else if (country == 'de') {
+  } else if (country === 'de') {
     return 'Hallo, Welt';
   } else {
     return "Hello, World"
@@ -54,8 +54,8 @@ console.log(assignGrade(79));
 console.log(assignGrade(45));
 
 // Exercise 4: Pluralizer
-var pluralizer = function (count, noun) {
-  if (count == 1) {
+var pluralizer = function(count, noun) {
+  if (count === 0) {
     return count + ' ' + noun;
   } else {
     return count + ' ' + noun + 's';
