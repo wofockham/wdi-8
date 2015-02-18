@@ -1,7 +1,5 @@
 var calculate = {
-  tidy: function(a) {
-    return parseFloat(a);
-  },
+  tidy: parseFloat, // You are not expected to understand this.
 
   add: function(a, b) {
     return this.tidy(a) + this.tidy(b);
