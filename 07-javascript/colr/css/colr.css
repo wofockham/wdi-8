@@ -1,0 +1,13 @@
+body {
+
+}
+
+#colour {
+  font-size: 300%;
+  display: block;
+  margin: auto;
+  padding: 0.5em;
+  border-radius: 0.2em;
+  margin-top: 48vh;
+  text-align: center;
+}
