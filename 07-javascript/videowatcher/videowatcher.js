@@ -1,13 +1,6 @@
-var links = document.querySelectorAll('a');
+var $links = $('a');
 
-for (var i = 0; i < links.length; i++) {
-  var link = links[i];
-
-  var video = link.getAttribute('href');
-  var thumb = youtube.generateThumbnailUrl(video);
-
-  var image = document.createElement('img');
-  image.setAttribute('src', thumb);
-
-  link.appendChild(image);
-};
+$links.each(function (i, elem) {
+  var thumb = youtube.generateThumbnailUrl(elem.href);
+  $('<img src="' + thumb + '">').appendTo(elem);
+});
