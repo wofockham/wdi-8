@@ -45,4 +45,12 @@ $(document).ready(function () {
 
   // Event delegation:
   $('#colors').on('click', '.box', setColor);
+
+
+  var addBackground = function () {
+    var bg = $('#bg').val();
+    $('#canvas').css('background-image', 'url(' + bg + ')');
+  }
+
+  $('#add_bg').on('click', addBackground);
 });
