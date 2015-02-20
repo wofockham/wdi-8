@@ -13,7 +13,7 @@ $(document).ready(function () {
   // Event delegation for efficiency.
   $('#canvas').on('mouseover', '.pixel', function (event) {
     var currentColor = $('.selected').css('background-color');
-    $(this).css('background-color', currentColor);
+    $(this).css('background', currentColor);
   });
 
 
