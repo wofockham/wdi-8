@@ -1,0 +1,19 @@
+
+.box {
+  display: inline-block;
+  margin: 10px 5px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.pixel {
+  display: inline-block;
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  float: left; /* sorry joel */
+}
+
