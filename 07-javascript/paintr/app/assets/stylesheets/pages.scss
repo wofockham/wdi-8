@@ -8,12 +8,15 @@
   cursor: pointer;
 }
 
+#canvas {
+  font-size: 0;
+}
+
 .pixel {
   display: inline-block;
   margin: 0;
   width: 10px;
   height: 10px;
   border: 1px solid black;
-  float: left; /* sorry joel */
 }
 
