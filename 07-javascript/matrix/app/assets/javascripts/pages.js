@@ -1,13 +1,16 @@
 var numbers = [];
 
 $(document).ready(function () {
+  var addBox = function (n) {
+    var $box = $('<div/>').addClass('box');
+    $box.text(n);
+    $box.prependTo('#boxes');
+  };
+
+
   var showNumbers = function () {
     $('#boxes').empty();
-    _(numbers).each(function (n) {
-      var $box = $('<div/>').addClass('box');
-      $box.text(n);
-      $box.prependTo('#boxes');
-    });
+    _(numbers).each(addBox);
   };
 
   var addNumber = function () {
@@ -16,9 +19,7 @@ $(document).ready(function () {
 
     numbers.push(n);
 
-    var $box = $('<div/>').addClass('box');
-    $box.text(n);
-    $box.prependTo('#boxes');
+    addBox(n);
 
     $('#number').val('').focus();
   };
@@ -47,4 +48,34 @@ $(document).ready(function () {
   }
 
   $('#function').on('click', customFunction);
+
+
+  var timer = null;
+
+  $('#start').on('click', function () {
+    clearInterval(timer);
+    timer = setInterval(addRandom, 500);
+  });
+
+  $('#stop').on('click', function () {
+    clearInterval(timer);
+  });
+
+  var addRandom = function () {
+    var n = _.random(10000);
+    numbers.push(n);
+    addBox(n);
+  };
+
 });
+
+
+
+
+
+
+
+
+
+
+
