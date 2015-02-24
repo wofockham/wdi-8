@@ -1,4 +1,15 @@
+var currentPage = 1;
+var requestInProgress = false;
+
 var searchFlickr = function () {
+
+  if (requestInProgress === true) {
+    console.log('Request is already in progress');
+    return; // Abort abort!
+  }
+
+  requestInProgress = true;
+
   var query = $('#query').val();
 
   // All requests to the Flickr REST API are based off this URL.
@@ -9,7 +20,9 @@ var searchFlickr = function () {
     method: 'flickr.photos.search',
     api_key: '2f5ac274ecfac5a455f38745704ad084',
     text: query,
-    format: 'json'
+    format: 'json',
+    per_page: 100,
+    page: currentPage++
   }).done(processImages); // Our processImages callback displays the images on the page.
 };
 
@@ -34,8 +47,13 @@ var processImages = function(result) {
     // Append a new image to the page for the image URL.
     var $img = $('<img>').attr('src', url);
     $img.appendTo('#images');
-
   });
+
+  requestInProgress = false;
+};
+
+var bottomOfPage = function () {
+  return $(document).height() - ($(window).scrollTop() + $(window).height()) < 400;
 };
 
 $(document).ready(function () {
@@ -50,6 +68,14 @@ $(document).ready(function () {
     }
 
     searchFlickr();
+  });
+
+  $('#load_more').on('click', searchFlickr);
+
+  $(window).on('scroll', function () {
+    if (bottomOfPage()) {
+      searchFlickr();
+    }
   });
 
 });
