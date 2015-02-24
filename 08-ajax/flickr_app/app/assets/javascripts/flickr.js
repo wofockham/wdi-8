@@ -1,15 +1,5 @@
 var currentPage = 1;
-var requestInProgress = false;
-
 var searchFlickr = function () {
-
-  if (requestInProgress === true) {
-    console.log('Request is already in progress');
-    return; // Abort abort!
-  }
-
-  requestInProgress = true;
-
   var query = $('#query').val();
 
   // All requests to the Flickr REST API are based off this URL.
@@ -25,6 +15,8 @@ var searchFlickr = function () {
     page: currentPage++
   }).done(processImages); // Our processImages callback displays the images on the page.
 };
+
+var throttledSearchFlickr = _.throttle(searchFlickr, 5000);
 
 var processImages = function(result) {
   var photos = result.photos.photo; // Extract just the part of the data we care about.
@@ -48,8 +40,6 @@ var processImages = function(result) {
     var $img = $('<img>').attr('src', url);
     $img.appendTo('#images');
   });
-
-  requestInProgress = false;
 };
 
 var bottomOfPage = function () {
@@ -74,7 +64,7 @@ $(document).ready(function () {
 
   $(window).on('scroll', function () {
     if (bottomOfPage()) {
-      searchFlickr();
+      throttledSearchFlickr();
     }
   });
 
