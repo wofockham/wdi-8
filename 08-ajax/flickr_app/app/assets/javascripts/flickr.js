@@ -61,18 +61,11 @@ $(document).ready(function () {
   // Click to search:
   $('#search').on('click', searchFlickr);
 
-  // Or search with enter:
-  $('#query').on('keypress', function (event) {
-    // Ignore any keypresses that are not Enter.
-    if (event.which !== 13) {
-      return;
-    }
-
-    searchFlickr();
-  });
-
   $('#query').on('change', function () {
     endOfImages = false;
+    currentPage = 1; // Thanks Liam!
+    $('#images').empty();
+    searchFlickr();
   });
 
   $(window).on('scroll', function () {
