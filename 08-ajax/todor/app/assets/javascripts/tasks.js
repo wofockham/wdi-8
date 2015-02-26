@@ -53,19 +53,24 @@ var taskApp = {
     $('#tasks').empty();
     for (var i = 0; i < this.tasks.length; i++) {
       var task = this.tasks[i];
-      var $li = $('<li/>');
-      $li.attr('data-task-id', task.id);
-      var $span = $('<span/>').text(task.title).attr('title', task.description);
-      var $completed = $('<input>', { type: 'checkbox' });
-      if (task.completed) {
-        $completed.attr('checked', 'checked');
-      }
-      var $delete = $('<span>').addClass('delete').html(' &#x2718;');
-      $li.append($span);
-      $li.prepend($completed);
-      $li.append($delete);
+      var $li = this.taskHTML(task);
       $li.appendTo('#tasks');
     }
+  },
+
+  taskHTML: function (task) {
+    var $li = $('<li/>');
+    $li.attr('data-task-id', task.id);
+    var $span = $('<span/>').text(task.title).attr('title', task.description);
+    var $completed = $('<input>', { type: 'checkbox' });
+    if (task.completed) {
+      $completed.attr('checked', 'checked');
+    }
+    var $delete = $('<span>').addClass('delete').html(' &#x2718;');
+    $li.append($span);
+    $li.prepend($completed);
+    $li.append($delete);
+    return $li;
   }
 };
 
