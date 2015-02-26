@@ -1,23 +1,4 @@
 var taskApp = {
-  createTask: function (event) {
-    event.preventDefault();
-
-    $.ajax('/tasks', {
-      type: 'POST',
-      dataType: 'json',
-      data: {
-        "task[title]": $('#task_title').val(),
-        "task[description]": $('#task_description').val(),
-        "task[completed]": $('#task_completed:checked').val()
-      }
-    }).done(function (tasks) {
-      taskApp.tasks = tasks;
-      taskApp.renderTasks();
-      $('#task_title').val('').focus();
-      $('#task_description').val('');
-      $('#task_completed').removeProp('checked'); // Thanks David Mark
-    })
-  },
 
   toggleCompleted: function (event) {
     var $li = $(this).parent();
@@ -64,11 +45,13 @@ $(document).ready(function () {
 
   taskApp.loadTasks();
 
-  $('#new_task').on('submit', taskApp.createTask);
+  // $('#new_task').on('submit', taskApp.createTask);
 
   // Requires event delegation because tasks are added to the page dynamically.
   $('#tasks').on('click', '.delete', taskApp.deleteTask);
   $('#tasks').on('click', ':checkbox', taskApp.toggleCompleted);
 
+  // https://github.com/rails/jquery-ujs/wiki/ajax
+  $('#new_task').on('ajax:success', taskApp.loadTasks);
 });
 
