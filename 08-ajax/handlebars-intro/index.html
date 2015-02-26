@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marx Bros Information</title>
+  <script src="js/jquery.js"></script>
+  <script src="js/handlebars.js"></script>
+  <script src="js/templates.js"></script>
+</head>
+<body>
+
+  <h1>Marx Bros Information</h1>
+
+  <div id="details"></div>
+
+  <script id="brosTemplate" type="handlebars-template">
+    <p>
+      <b>{{ name }}</b>
+      plays the
+      {{ instrument }}. He is very nice.
+    </p>
+    <p>Fun fact: {{ funFact }}</p>
+  </script>
+
+</body>
+</html>
