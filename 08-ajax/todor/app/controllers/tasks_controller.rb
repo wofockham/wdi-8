@@ -43,6 +43,13 @@ class TasksController < ApplicationController
     redirect_to root_path
   end
 
+  def toggle_completed
+    task = Task.find params[:id]
+    task.completed = !task.completed
+    task.save
+    render :json => { :status => 'ok' }
+  end
+
   private
   def task_params
     params.require(:task).permit(:title, :description, :completed)
