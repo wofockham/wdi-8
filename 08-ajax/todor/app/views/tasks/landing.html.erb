@@ -4,3 +4,11 @@
 <%= render :partial => 'form' %>
 
 <ul id="tasks"></ul>
+
+<script type="x-handlebars-template" id="taskTemplate">
+  <li data-task-id="{{ id }}">
+    <input type="checkbox" {{#if completed}} checked {{/if}}>
+    <span title="{{ description }}">{{ title }}</span>
+    <span class="delete"> &#x2718;</span>
+  </li>
+</script>
