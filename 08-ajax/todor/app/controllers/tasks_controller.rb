@@ -5,7 +5,7 @@ class TasksController < ApplicationController
   def index
     @tasks = Task.all
     respond_to do |format|
-      format.html {}
+      format.html { }
       format.json { render :json => @tasks }
     end
   end
@@ -19,11 +19,11 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new task_params
-    if @task.save
-      redirect_to @task
-    else
-      render :new
+    @task = Task.create task_params
+
+    respond_to do |format|
+      format.html { redirect_to @task }
+      format.json { render :json => Task.all }
     end
   end
 
