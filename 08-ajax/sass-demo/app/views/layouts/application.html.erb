@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SassDemo</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <h1>All This Useless Beauty</h1>
+
+  <%= yield %>
+
+  <footer>
+    &copy; Copyright 2004
+  </footer>
+</div>
+
+</body>
+</html>

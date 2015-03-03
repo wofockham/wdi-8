@@ -1,0 +1,83 @@
+$brand-color: blue;
+$centered: auto;
+
+$container-width: 800px;
+
+@mixin highlight {
+  text-decoration: underline;
+  font-size: 1.2em;
+}
+
+@mixin right-align {
+  text-align: right;
+}
+
+@mixin indent($right) {
+  margin-right: $right;
+}
+
+.container {
+  max-width: $container-width;
+  margin: $centered;
+}
+
+.container > h1 {
+  color: $brand-color;
+  @include right-align;
+}
+
+.post {
+  padding: 1em 2em;
+  background-color: #bbb;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+
+  .slug {
+    font-size: 1.3em;
+    font-style: italic;
+    text-align: center;
+    color: #555;
+    background-color: #999;
+    width: $container-width / 3;
+    margin: $centered;
+  }
+
+  .content {
+    padding: 1em;
+    background-color: #ddd;
+
+    p {
+      margin-top: 2em;
+      @include right-align;
+    }
+
+    p.first {
+      @include highlight;
+      @include indent(6em);
+    }
+  }
+}
+
+.notification {
+  border: 1px solid #999;
+  color: blue;
+  text-align: center;
+  padding: 1em;
+  width: $container-width / 4;
+  margin: $centered;
+}
+
+.error {
+  @extend .notification;
+  color: red;
+}
+
+.success {
+  @extend .notification;
+  color: green;
+}
+
+footer {
+  color: $brand-color;
+  text-align: right;
+}
