@@ -1,0 +1,21 @@
+<h1>Weather Example</h1>
+
+<!--script>
+var maximums = <%= Temperature.pluck(:maximum).to_json %>;
+var minimums = <%= Temperature.pluck(:minimum).to_json %>;
+
+data.datasets[0].data = maximums;
+data.datasets[1].data = minimums;
+
+$(document).ready(function () {
+    var $chart = $('#weather');
+    if ($chart.length === 0) {
+        return;
+    }
+    var ctx = $chart.get(0).getContext('2d');
+    var myLineChart = new Chart(ctx).Line(data);
+});
+
+</script-->
+
+<canvas id="weather" width="800" height="400"></canvas>
