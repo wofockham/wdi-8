@@ -14,5 +14,11 @@ describe Bank do
     end
   end
 
-
+  describe '#create_account' do
+    it 'creates an account' do
+      bank = Bank.new('TDD Bank')
+      bank.create_account('Bob', 200)
+      expect(bank.accounts['Bob']).to eq 200
+    end
+  end
 end
