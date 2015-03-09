@@ -21,3 +21,5 @@ end
 
 # A BUNCH OF BOOKS THAT YOU MIGHT FIND INTERESTING
 # https://files.slack.com/files-pri/T0351JZQ0-F03UJFDTP/regular_expressions.zip
+
+# Remember that Regular Expressions is its own language! It works in most languages
