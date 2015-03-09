@@ -22,4 +22,6 @@ end
 # A BUNCH OF BOOKS THAT YOU MIGHT FIND INTERESTING
 # https://files.slack.com/files-pri/T0351JZQ0-F03UJFDTP/regular_expressions.zip
 
-# Remember that Regular Expressions is its own language! It works in most languages
+# Remember that Regular Expressions is its own language! It works in most languages.  
+
+# Here is the Ruby documentation - http://ruby-doc.org/core-2.1.1/Regexp.html
