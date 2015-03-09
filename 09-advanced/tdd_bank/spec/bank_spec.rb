@@ -19,39 +19,51 @@ describe Bank do
     end
   end
 
-  describe '#create_account' do
-    it 'creates an account' do
-      bank.create_account('Bob', 200)
-      expect(bank.accounts['Bob']).to eq 200
-    end
-  end
+  context 'Bob has $200 in his accounts' do
 
-  describe '#deposit' do
-    it 'deposits an amount from a client into their account' do
+    before do
       bank.create_account('Bob', 200)
-      bank.deposit('Bob', 300)
-      expect(bank.accounts['Bob']).to eq(200 + 300)
-    end
-  end
-
-  describe '#balance' do
-    it 'returns the balance for client' do
-      bank.create_account('Bob', 200)
-      expect(bank.balance('Bob')).to eq 200
-    end
-  end
-
-  describe '#withdraw' do # Not an effective form of contraception
-    it 'subtracts money from the account' do
-      bank.create_account('Bob', 200)
-      bank.withdraw('Bob', 50)
-      expect(bank.balance('Bob')).to eq(200 - 50)
     end
 
-    it 'ignores requests for withdrawals that exceed the balance' do
-      bank.create_account('Bob', 200)
-      bank.withdraw('Bob', 1_000_000)
-      expect(bank.balance('Bob')).to eq 200
+    describe '#create_account' do
+      it 'creates an account' do
+        expect(bank.accounts['Bob']).to eq 200
+      end
+
+      it 'ignores deposits of negative amounts' do
+        bank.create_account('Jorge', -200)
+        expect(bank.accounts['Jorge']).to eq nil
+      end
+    end
+
+    describe '#deposit' do
+      it 'deposits an amount from a client into their account' do
+        bank.deposit('Bob', 300)
+        expect(bank.accounts['Bob']).to eq(200 + 300)
+      end
+
+      it 'ignores deposits of negative amounts' do
+        bank.deposit('Bob', -1_000_000)
+        expect(bank.balance('Bob')).to eq 200
+      end
+    end
+
+    describe '#balance' do
+      it 'returns the balance for client' do
+        expect(bank.balance('Bob')).to eq 200
+      end
+    end
+
+    describe '#withdraw' do # Not an effective form of contraception
+      it 'subtracts money from the account' do
+        bank.withdraw('Bob', 50)
+        expect(bank.balance('Bob')).to eq(200 - 50)
+      end
+
+      it 'ignores requests for withdrawals that exceed the balance' do
+        bank.withdraw('Bob', 1_000_000)
+        expect(bank.balance('Bob')).to eq 200
+      end
     end
   end
 end

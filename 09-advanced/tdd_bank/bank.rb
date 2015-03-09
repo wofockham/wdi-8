@@ -8,11 +8,11 @@ class Bank
   end
 
   def create_account(account_name, deposit)
-    @accounts[account_name] = deposit
+    @accounts[account_name] = deposit if deposit > 0
   end
 
   def deposit(account_name, amount)
-    @accounts[account_name] += amount
+    @accounts[account_name] += amount if amount > 0
   end
 
   def balance(account_name)
@@ -20,6 +20,6 @@ class Bank
   end
 
   def withdraw(account_name, amount)
-    @accounts[account_name] -= amount
+    @accounts[account_name] -= amount if @accounts[account_name] >= amount
   end
 end
