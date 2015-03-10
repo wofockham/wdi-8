@@ -58,9 +58,9 @@ var AppRouter = Backbone.Router.extend({
     var zooView = new ZooView({collection: gaZoo});
     zooView.render();
   },
-  viewAnimal: function () {
+  viewAnimal: function (id) {
     $('#main').empty();
-    console.log('you are viewing an animal');
+    console.log('you are viewing an animal', id);
   }
 });
 
@@ -68,15 +68,3 @@ $(document).ready(function () {
   var router = new AppRouter();
   Backbone.history.start();
 });
-
-
-
-
-
-
-
-
-
-
-
-
