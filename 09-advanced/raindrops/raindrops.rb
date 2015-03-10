@@ -1,3 +1,6 @@
+# README - https://gist.github.com/anonymous-wolf/89c0abb1dae801d7cab9
+# TESTS - https://gist.github.com/anonymous-wolf/a91806ceea2980308751
+
 class Raindrops
   def convert( value )
     # Unless one of these is true, just return the string version of the value
