@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backbone Blog</title>
+  <script src="js/jquery.js"></script>
+  <script src="js/underscore.js"></script>
+  <script src="js/backbone.js"></script>
+  <script src="js/blog.js"></script>
+</head>
+<body>
+
+  <div id="main"></div>
+
+  <script id="appView-template" type="text/x-template">
+    <h2>Recent Posts</h2>
+    <ul id="posts"></ul>
+  </script>
+
+  <script id="postListView-template" type="text/x-underscore-template">
+    <h3><%= title %></h3>
+  </script>
+
+  <script id="postView-template" type="text/x-underscore-template">
+    <h2><%= title %></h2>
+    <p><%= content %></p>
+  </script>
+
+</body>
+</html>
