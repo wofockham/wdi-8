@@ -11,8 +11,8 @@ var AppRouter = Backbone.Router.extend({
     appView.render();
   },
 
-  viewPost: function (id) {
-    var post = blogPosts.get(id);
+  viewPost: function (slug) {
+    var post = blogPosts.get(slug);
     var postView = new PostView({model: post});
     postView.render();
   }
@@ -20,6 +20,7 @@ var AppRouter = Backbone.Router.extend({
 
 // Our models, as per Rails.
 var Post = Backbone.Model.extend({
+  idAttribute: 'slug',
   defaults: {
     title: 'New Post',
     content: 'New Post content'
@@ -34,10 +35,10 @@ var Posts = Backbone.Collection.extend({
 
 // Seed data -- later we'll retrieve these from the server via AJAX instead.
 var blogPosts = new Posts([
-  new Post({id: 1, title: 'Post 1', content: 'Content the first'}),
-  new Post({id: 2, title: 'Post 2', content: 'Second content'}),
-  new Post({id: 3, title: 'Post 3', content: 'Hotdogs'}),
-  new Post({id: 4, title: 'Post 4', content: 'Draft post about hotdogs'})
+  new Post({id: 1, slug: 'groucho', title: 'Post 1', content: 'Content the first'}),
+  new Post({id: 2, slug: 'harpo', title: 'Post 2', content: 'Second content'}),
+  new Post({id: 3, slug: 'post-about-hotdogs', title: 'Post 3', content: 'Hotdogs'}),
+  new Post({id: 4, slug: 'chico', title: 'Post 4', content: 'Draft post about hotdogs'})
 ]);
 
 // Like Rails views but with the event handling stored here as well.
@@ -72,7 +73,7 @@ var PostListView = Backbone.View.extend({
     $('#posts').append(this.$el);
   },
   showPost: function () {
-    appRouter.navigate('posts/' + this.model.get('id'), true);
+    appRouter.navigate('posts/' + this.model.get('slug'), true);
   }
 });
 
