@@ -1,3 +1,5 @@
+// Kind of like the Rails router with embedded actions.
+// Makes the application navigatable, with meaningful URLs.
 var AppRouter = Backbone.Router.extend({
   routes: {
     '': 'index',
@@ -16,6 +18,7 @@ var AppRouter = Backbone.Router.extend({
   }
 });
 
+// Our models, as per Rails.
 var Post = Backbone.Model.extend({
   defaults: {
     title: 'New Post',
@@ -23,10 +26,13 @@ var Post = Backbone.Model.extend({
   }
 });
 
+// Like a fancy array for storing a collection of models.
+// Uses underscore.js to give us ActiveRecordish methods (like .get)
 var Posts = Backbone.Collection.extend({
   model: Post
 });
 
+// Seed data -- later we'll retrieve these from the server via AJAX instead.
 var blogPosts = new Posts([
   new Post({id: 1, title: 'Post 1', content: 'Content the first'}),
   new Post({id: 2, title: 'Post 2', content: 'Second content'}),
@@ -34,8 +40,10 @@ var blogPosts = new Posts([
   new Post({id: 4, title: 'Post 4', content: 'Draft post about hotdogs'})
 ]);
 
+// Like Rails views but with the event handling stored here as well.
+// Responsible for showing data on the page, but also allowing interaction.
 var AppView = Backbone.View.extend({
-  el: '#main',
+  el: '#main', // define the selector which this view is associated with
   render: function () {
     var appViewHTML = $('#appView-template').html();
     this.$el.html(appViewHTML);
@@ -48,7 +56,7 @@ var AppView = Backbone.View.extend({
 });
 
 var PostListView = Backbone.View.extend({
-  tagName: 'li',
+  tagName: 'li', // new PostListView will use this to create a new <li>
   events: {
     'click': 'showPost'
   },
@@ -78,8 +86,10 @@ var PostView = Backbone.View.extend({
   }
 });
 
+// This is global so we access it inside certain views.
 var appRouter = new AppRouter();
 
 $(document).ready(function () {
+  // This kicks off the router and makes the Back and Foward buttons work.
   Backbone.history.start();
 });
