@@ -1,4 +1,6 @@
-var PostListView = Backbone.View.extend({
+var app = app || {};
+
+app.PostListView = Backbone.View.extend({
   tagName: 'li', // new PostListView will use this to create a new <li>
   events: {
     'click': 'showPost'
@@ -15,6 +17,6 @@ var PostListView = Backbone.View.extend({
     $('#posts').append(this.$el);
   },
   showPost: function () {
-    appRouter.navigate('posts/' + this.model.get('slug'), true);
+    app.appRouter.navigate('posts/' + this.model.get('slug'), true);
   }
 });

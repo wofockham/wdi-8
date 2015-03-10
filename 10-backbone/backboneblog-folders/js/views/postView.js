@@ -1,4 +1,6 @@
-var PostView = Backbone.View.extend({
+var app = app || {};
+
+app.PostView = Backbone.View.extend({
   el: '#main',
   render: function () {
     var postViewTemplate = $('#postView-template').html();
