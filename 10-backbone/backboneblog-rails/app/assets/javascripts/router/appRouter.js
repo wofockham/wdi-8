@@ -13,8 +13,8 @@ app.AppRouter = Backbone.Router.extend({
     appView.render();
   },
 
-  viewPost: function (slug) {
-    var post = app.blogPosts.get(slug);
+  viewPost: function (id) {
+    var post = app.blogPosts.get(id);
     var postView = new app.PostView({model: post});
     postView.render();
   }

@@ -17,6 +17,6 @@ app.PostListView = Backbone.View.extend({
     $('#posts').append(this.$el);
   },
   showPost: function () {
-    app.appRouter.navigate('posts/' + this.model.get('slug'), true);
+    app.appRouter.navigate('posts/' + this.model.get('id'), true);
   }
 });
