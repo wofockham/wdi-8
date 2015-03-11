@@ -18,12 +18,24 @@ class PrimeFactors
         factors << divisor
       end
       # We need to increment the divisor as soon as we exit the inner loop
-      divisor += 1
+
+      # This is what we had before (but this goes through every number)
+      # divisor += 1
+
+      # This adds a query about whether the divisor is even. We know that all prime factors after 2 are odd so we always check whether it is odd or even
+      # If it is even, it adds one again, if it is odd, it just returns the divisor
+      ( divisor += 1 ) % 2 == 0 ? divisor += 1 : divisor 
     end
     # We always need to return the factors array
     factors
   end
 end
+
+# THIS WAS JOELS SOLUTION
+# Prime.prime_division(1234567).map { |p, c| [p] * c }.flatten
+
+# This is Joels solution using flat_map (thanks Liam)
+# Prime.prime_division(1234567).flat_map { |p, c| [p] * c }
 
 ###########################
 ###########################

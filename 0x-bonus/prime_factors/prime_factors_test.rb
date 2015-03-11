@@ -40,7 +40,7 @@ class PrimeFactorsTest < MiniTest::Test
   end
   def test_really_large_number
     # skip
-    assert_equal [5, 17, 23, 461], PrimeFactors.for(901255)
+    assert_equal [5, 17, 23, 461], PrimeFactors.for(90120055)
   end
 
 end
