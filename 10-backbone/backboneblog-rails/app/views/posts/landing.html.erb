@@ -15,13 +15,26 @@
     <h2>{{ title }}</h2>
     <p>{{ content }}</p>
     <aside id="comments"></aside>
+
+    <form>
+      <div>
+        <label for="author">Name:</label><br>
+        <input id="author">
+      </div>
+      <div>
+        <label for="content">Comment:</label><br>
+        <textarea id="content"></textarea>
+      </div>
+      <button>Post comment</button>
+    </form>
   </script>
 
   <script id="commentView-template" type="text/x-underscore-template">
     <blockquote>
       {{ content }}
 
-      &mdash; <cite>{{ author }}</cite>
+      <br>
+      &mdash; <cite>{{ author }}</cite>, {{ created_at }}
     </blockquote>
   </script>
 

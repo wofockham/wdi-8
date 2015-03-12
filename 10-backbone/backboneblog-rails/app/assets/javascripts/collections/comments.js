@@ -5,10 +5,11 @@ app.Comments = Backbone.Collection.extend({
     return '/posts/' + this.postID + '/comments';
   },
   model: app.Comment,
-  initialize: function (postID) {
-    this.postID = postID;
+  initialize: function (options) {
+    this.postID = options.post_id;
     this.on('add', function (comment) {
-      console.log('new comment added', comment);
+      var commentView = new app.CommentView({model: comment});
+      commentView.render();
     });
   }
 });
