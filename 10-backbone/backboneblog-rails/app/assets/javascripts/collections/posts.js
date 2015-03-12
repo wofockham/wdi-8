@@ -7,8 +7,7 @@ app.Posts = Backbone.Collection.extend({
   model: app.Post,
   initialize: function () {
     this.on('add', function (post) {
-      var postListView = new app.PostListView({model: post});
-      postListView.render();
+      console.log('added a new post', post);
     });
   }
 });

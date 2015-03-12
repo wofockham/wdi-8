@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   root :to => 'posts#landing'
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
 end

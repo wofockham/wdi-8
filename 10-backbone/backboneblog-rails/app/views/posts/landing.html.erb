@@ -14,4 +14,18 @@
   <script id="postView-template" type="text/x-underscore-template">
     <h2>{{ title }}</h2>
     <p>{{ content }}</p>
+    <aside id="comments"></aside>
   </script>
+
+  <script id="commentView-template" type="text/x-underscore-template">
+    <blockquote>
+      {{ content }}
+
+      &mdash; <cite>{{ author }}</cite>
+    </blockquote>
+  </script>
+
+
+
+
+

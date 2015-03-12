@@ -7,5 +7,8 @@ app.PostView = Backbone.View.extend({
     var postViewHTML = _.template(postViewTemplate);
 
     this.$el.html(postViewHTML(this.model.toJSON()));
+
+    var comments = new app.Comments(this.model.get('id'));
+    comments.fetch();
   }
 });

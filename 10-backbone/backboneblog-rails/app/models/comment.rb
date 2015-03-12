@@ -1,14 +1,15 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: comments
 #
 #  id         :integer          not null, primary key
-#  title      :string
+#  post_id    :integer
+#  author     :string
 #  content    :text
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class Post < ActiveRecord::Base
-  has_many :comments
+class Comment < ActiveRecord::Base
+  belongs_to :post
 end

@@ -7,6 +7,10 @@ app.AppView = Backbone.View.extend({
   render: function () {
     var appViewHTML = $('#appView-template').html();
     this.$el.html(appViewHTML);
-    app.blogPosts.fetch();
+
+    this.collection.each(function (post) {
+      var postListView = new app.PostListView({model: post});
+      postListView.render();
+    });
   }
 });
