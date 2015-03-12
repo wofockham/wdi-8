@@ -4,5 +4,11 @@ var app = app || {};
 // Uses underscore.js to give us ActiveRecordish methods (like .get)
 app.Posts = Backbone.Collection.extend({
   url: '/posts',
-  model: app.Post
+  model: app.Post,
+  initialize: function () {
+    this.on('add', function (post) {
+      var postListView = new app.PostListView({model: post});
+      postListView.render();
+    });
+  }
 });

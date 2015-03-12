@@ -15,12 +15,10 @@ $(document).ready(function () {
     interpolate: /\{\{(.+?)\}\}/g
   };
 
-  app.blogPosts.fetch().done(function () {
     // This is global so we access it inside certain views.
-    app.appRouter = new app.AppRouter();
+  app.appRouter = new app.AppRouter();
 
-    // This kicks off the router and makes the Back and Foward buttons work.
-    Backbone.history.start({pushState: false}); // Modernizr.history
-  });
+  // This kicks off the router and makes the Back and Foward buttons work.
+  Backbone.history.start({pushState: false}); // Modernizr.history
 
 });
