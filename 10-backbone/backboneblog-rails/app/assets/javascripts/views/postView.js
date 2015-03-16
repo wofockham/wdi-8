@@ -28,7 +28,7 @@ app.PostView = Backbone.View.extend({
     });
 
     var view = this;
-    comment.save().done(function (newComment) {
+    comment.save().done(function () {
       //view.comments.add(newComment);
       view.comments.fetch(); // Refresh all the comments.
     });

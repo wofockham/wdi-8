@@ -20,7 +20,7 @@ $(document).ready(function () {
     app.appRouter = new app.AppRouter();
 
     // This kicks off the router and makes the Back and Foward buttons work.
-    Backbone.history.start({pushState: false}); // Modernizr.history
+    Backbone.history.start(); // Modernizr.history
   });
 
 });
