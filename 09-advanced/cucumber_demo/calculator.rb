@@ -12,4 +12,16 @@ class Calculator
     puts result
     result
   end
+
+  def subtract
+    result = @input.inject(:-)
+    puts result
+    result
+  end
+
+  def multiply
+    result = @input.inject(:*)
+    puts result
+    result
+  end
 end
