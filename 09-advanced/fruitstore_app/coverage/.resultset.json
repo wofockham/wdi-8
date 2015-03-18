@@ -1,30 +1,13 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/spec/models/fruit_spec.rb": [
+      "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/spec/controllers/fruits_controller_spec.rb": [
         1,
         null,
         1,
-        null,
-        2,
-        null,
         1,
         1,
-        2,
-        null,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
+        8,
         null,
         null,
         1,
@@ -34,15 +17,12 @@
         null,
         1,
         1,
+        1,
         null,
         null,
         1,
         1,
-        1,
-        1,
-        1,
-        1,
-        1,
+        null,
         null,
         null,
         null
@@ -264,63 +244,29 @@
       ],
       "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/config/routes.rb": [
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
         null
       ],
       "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/app/helpers/fruits_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/app/controllers/fruits_controller.rb": [
+        1,
+        1,
+        2,
+        2,
+        null,
+        null
+      ],
+      "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
         1,
         null
       ],
@@ -332,34 +278,8 @@
         null,
         null,
         null
-      ],
-      "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/spec/models/shelf_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        null
-      ],
-      "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/app/models/shelf.rb": [
-        1,
-        1,
-        null
-      ],
-      "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/app/models/apple.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/app/models/pear.rb": [
-        1,
-        1,
-        1,
-        null,
-        null
       ]
     },
-    "timestamp": 1426640827
+    "timestamp": 1426722365
   }
 }
