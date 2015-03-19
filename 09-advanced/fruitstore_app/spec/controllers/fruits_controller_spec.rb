@@ -57,9 +57,12 @@ RSpec.describe FruitsController, :type => :controller do
       end
 
       it 'should redirect to the show action' do
+        expect(response.status).to eq(302)
+        expect(response).to redirect_to(fruit_path(assigns(:fruit)))
       end
 
       it 'should increase the number of Fruits' do
+        expect(Fruit.count).to eq(1)
       end
     end
 
