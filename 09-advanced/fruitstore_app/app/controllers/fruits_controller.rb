@@ -1,6 +1,9 @@
 class FruitsController < ApplicationController
   def index
-    @fruits = Fruit.all
-    render :text => "blah blah"
+    @fruits = Fruit.order('id DESC')
+    respond_to do |format|
+      format.html {}
+      format.json { render :json => @fruits }
+    end
   end
 end
