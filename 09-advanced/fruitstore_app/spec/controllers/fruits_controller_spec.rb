@@ -72,12 +72,15 @@ RSpec.describe FruitsController, :type => :controller do
       end
 
       it 'should give us a 200 success status' do # ???
+        expect(response.status).to eq(200)
       end
 
       it 'should render the new template' do
+        expect(response).to render_template('new')
       end
 
       it 'should not increase the number of Fruits' do
+        expect(Fruit.count).to eq(0)
       end
     end
   end
