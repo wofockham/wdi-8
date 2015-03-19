@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.7.1/application.js' type='text/javascript'></script>    
     <link href='./assets/0.7.1/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.7.1/favicon_green.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.7.1/favicon_red.png" />
     <link rel="icon" type="image/png" href="./assets/0.7.1/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-03-19T11:33:48+11:00">2015-03-19T11:33:48+11:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-03-19T11:44:04+11:00">2015-03-19T11:44:04+11:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="red">78.57%</span></span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         1.09
+       <span class="red">
+         0.78
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>20</b> files in total.
-    <b>89</b> relevant lines. 
-    <span class="green"><b>89</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>19</b> files in total.
+    <b>98</b> relevant lines. 
+    <span class="green"><b>77</b> lines covered</span> and
+    <span class="red"><b>21</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#fa7a3553027cda1ced8a38cee820e6f3c3a2c823" class="src_link" title="app/controllers/fruits_controller.rb">app/controllers/fruits_controller.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="red strong">33.33 %</td>
         <td>9</td>
         <td>6</td>
-        <td>6</td>
-        <td>0</td>
-        <td>4.8</td>
+        <td>2</td>
+        <td>4</td>
+        <td>0.3</td>
       </tr>
       
       <tr>
@@ -86,16 +86,6 @@
         <td>2</td>
         <td>1</td>
         <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
-      </tr>
-      
-      <tr>
-        <td class="strong"><a href="#63dc6d11d2c0f0446739ba24021d1bf2622767ed" class="src_link" title="app/models/fruit.rb">app/models/fruit.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>7</td>
-        <td>3</td>
-        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -232,12 +222,12 @@
       
       <tr>
         <td class="strong"><a href="#180265396cc65f3a533eeb43451d48e606d71587" class="src_link" title="spec/controllers/fruits_controller_spec.rb">spec/controllers/fruits_controller_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>52</td>
-        <td>30</td>
-        <td>30</td>
-        <td>0</td>
-        <td>1.9</td>
+        <td class="red strong">59.52 %</td>
+        <td>81</td>
+        <td>42</td>
+        <td>25</td>
+        <td>17</td>
+        <td>0.6</td>
       </tr>
       
       <tr>
@@ -317,11 +307,11 @@
         <div class="source_table" id="fa7a3553027cda1ced8a38cee820e6f3c3a2c823">
   <div class="header">
     <h3>app/controllers/fruits_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">33.33 %</span> covered</h4>
     <div>
       <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
   </div>
   
@@ -340,26 +330,26 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="3">
-          <span class="hits">6</span>
+        <li class="missed" data-hits="0" data-linenumber="3">
+          
           
           <code class="ruby">    @fruits = Fruit.order(&#39;id DESC&#39;)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="4">
-          <span class="hits">6</span>
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="5">
-          <span class="hits">6</span>
+        <li class="missed" data-hits="0" data-linenumber="5">
+          
           
           <code class="ruby">      format.html {}</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="6">
-          <span class="hits">9</span>
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
           
           <code class="ruby">      format.json { render :json =&gt; @fruits }</code>
         </li>
@@ -437,66 +427,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-      
-        <div class="source_table" id="63dc6d11d2c0f0446739ba24021d1bf2622767ed">
-  <div class="header">
-    <h3>app/models/fruit.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class Fruit &lt; ActiveRecord::Base</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  belongs_to :shelf</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="3">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="4">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def squishy?</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby">    nil</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
@@ -1637,11 +1567,11 @@
         <div class="source_table" id="180265396cc65f3a533eeb43451d48e606d71587">
   <div class="header">
     <h3>spec/controllers/fruits_controller_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">59.52 %</span> covered</h4>
     <div>
-      <b>30</b> relevant lines. 
-      <span class="green"><b>30</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>42</b> relevant lines. 
+      <span class="green"><b>25</b> lines covered</span> and
+      <span class="red"><b>17</b> lines missed.</span>
     </div>
   </div>
   
@@ -1678,8 +1608,8 @@
           <code class="ruby">    before do</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="6">
-          <span class="hits">24</span>
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
           
           <code class="ruby">      3.times { |i| Fruit.create(:name =&gt; &quot;Fruit number #{i}&quot;) }</code>
         </li>
@@ -1708,8 +1638,8 @@
           <code class="ruby">      before do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="11">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
           
           <code class="ruby">        get :index</code>
         </li>
@@ -1732,14 +1662,14 @@
           <code class="ruby">      it &quot;should respond with a status 200&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
           
           <code class="ruby">        expect(response).to be_success</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="16">
+          
           
           <code class="ruby">        expect(response.status).to eq(200)</code>
         </li>
@@ -1762,26 +1692,26 @@
           <code class="ruby">      it &quot;should provide the fruits in an instance variable in reverse order&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="20">
+          
           
           <code class="ruby">        expect(assigns(:fruits)).to be # Whatever, Hamlet</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="21">
+          
           
           <code class="ruby">        expect(assigns(:fruits).length).to eq(3)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="22">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="22">
+          
           
           <code class="ruby">        expect(assigns(:fruits).first.class).to eq(Fruit)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="23">
+          
           
           <code class="ruby">        expect(assigns(:fruits).last.name).to eq(&quot;Fruit number 0&quot;)</code>
         </li>
@@ -1804,8 +1734,8 @@
           <code class="ruby">      it &quot;should render the index template&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
           
           <code class="ruby">        expect(response).to render_template(&#39;index&#39;)</code>
         </li>
@@ -1840,8 +1770,8 @@
           <code class="ruby">      before do</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="33">
-          <span class="hits">3</span>
+        <li class="missed" data-hits="0" data-linenumber="33">
+          
           
           <code class="ruby">        get :index, :format =&gt; :json</code>
         </li>
@@ -1864,14 +1794,14 @@
           <code class="ruby">      it &#39;should respond with a status 200&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="37">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="37">
+          
           
           <code class="ruby">        expect(response).to be_success</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="38">
+          
           
           <code class="ruby">        expect(response.status).to eq(200)</code>
         </li>
@@ -1894,8 +1824,8 @@
           <code class="ruby">      it &#39;should give content type JSON&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="42">
+          
           
           <code class="ruby">        expect(response.content_type).to eq(&#39;application/json&#39;)</code>
         </li>
@@ -1918,20 +1848,20 @@
           <code class="ruby">      it &#39;should provide the fruits in reverse order&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="46">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="46">
+          
           
           <code class="ruby">        fruits = JSON.parse(response.body)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="47">
+          
           
           <code class="ruby">        expect(fruits.length).to eq(3)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="48">
+          
           
           <code class="ruby">        expect(fruits.first[&#39;name&#39;]).to eq(&#39;Fruit number 2&#39;)</code>
         </li>
@@ -1955,6 +1885,180 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;POST to create&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    describe &#39;a fruit with valid information&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      before do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        post :create, { :fruit =&gt; {:name =&gt; &#39;Strawberry&#39;} }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;should redirect to the show action&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="60">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;should increase the number of Fruits&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    describe &#39;a fruit without a name&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      before do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="68">
+          
+          
+          <code class="ruby">        post :create, { :fruit =&gt; {:name =&gt; &#39;&#39;} }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;should give us a 200 success status&#39; do # ???</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="74">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;should render the new template&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="77">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;should not increase the number of Fruits&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
           
           
           <code class="ruby">end</code>
