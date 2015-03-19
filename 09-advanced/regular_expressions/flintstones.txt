@@ -10,9 +10,14 @@ Barney Rubble
 Betty Rubble
 Bamm-Bamm Rubble
 Mr. Slate
-Mississippi
+Mississippi                                  
 llama
 wilma blah blah and fred
 fred and wilma
-
-
+beforematchafter
+wilma                            
+barney
+Mrs. Wilma Flintstone
+wilma&fred
+wilma
+I saw Wilma yesterday
