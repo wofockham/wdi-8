@@ -14,27 +14,27 @@
       <img src="./assets/0.7.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-03-19T11:44:04+11:00">2015-03-19T11:44:04+11:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-03-19T11:47:45+11:00">2015-03-19T11:47:45+11:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">78.57%</span></span>
+    (<span class="covered_percent"><span class="red">79.82%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.78
+         0.81
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>19</b> files in total.
-    <b>98</b> relevant lines. 
-    <span class="green"><b>77</b> lines covered</span> and
-    <span class="red"><b>21</b> lines missed </span>
+    <b>20</b> files in total.
+    <b>109</b> relevant lines. 
+    <span class="green"><b>87</b> lines covered</span> and
+    <span class="red"><b>22</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#fa7a3553027cda1ced8a38cee820e6f3c3a2c823" class="src_link" title="app/controllers/fruits_controller.rb">app/controllers/fruits_controller.rb</a></td>
-        <td class="red strong">33.33 %</td>
+        <td class="red strong">64.29 %</td>
+        <td>23</td>
+        <td>14</td>
         <td>9</td>
-        <td>6</td>
-        <td>2</td>
-        <td>4</td>
-        <td>0.3</td>
+        <td>5</td>
+        <td>0.6</td>
       </tr>
       
       <tr>
@@ -86,6 +86,16 @@
         <td>2</td>
         <td>1</td>
         <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#63dc6d11d2c0f0446739ba24021d1bf2622767ed" class="src_link" title="app/models/fruit.rb">app/models/fruit.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>7</td>
+        <td>3</td>
+        <td>3</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -307,11 +317,11 @@
         <div class="source_table" id="fa7a3553027cda1ced8a38cee820e6f3c3a2c823">
   <div class="header">
     <h3>app/controllers/fruits_controller.rb</h3>
-    <h4><span class="red">33.33 %</span> covered</h4>
+    <h4><span class="red">64.29 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>2</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <b>14</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -367,6 +377,90 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @fruit = Fruit.new fruit_params</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    if @fruit.save</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      redirect_to @fruit</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="15">
+          
+          
+          <code class="ruby">      render :new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def fruit_params</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    params.require(:fruit).permit(:name)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">end</code>
@@ -427,6 +521,66 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="63dc6d11d2c0f0446739ba24021d1bf2622767ed">
+  <div class="header">
+    <h3>app/models/fruit.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>3</b> relevant lines. 
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Fruit &lt; ActiveRecord::Base</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :shelf</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def squishy?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">    nil</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
@@ -1551,7 +1705,7 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
-          <code class="ruby">  resources :fruits, :only =&gt; [:index]</code>
+          <code class="ruby">  resources :fruits, :only =&gt; [:index, :create, :show]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="3">
