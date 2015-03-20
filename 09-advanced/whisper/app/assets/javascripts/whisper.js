@@ -1,7 +1,6 @@
 $(document).ready(function () {
+  whisper.router = new whisper.Router();
+  Backbone.history.start();
+
   whisper.secrets = new whisper.Secrets();
-  whisper.secrets.fetch().done(function () {
-    whisper.router = new whisper.Router();
-    Backbone.history.start();
-  });
 });
