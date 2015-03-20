@@ -9,5 +9,5 @@ whisper.SecretsView = Backbone.View.extend({
       var $li = $('<li/>').text(secret.get('content'));
       view.$el.prepend($li);
     });
-  }
+  },
 });

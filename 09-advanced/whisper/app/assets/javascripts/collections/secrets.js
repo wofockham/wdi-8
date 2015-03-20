@@ -9,12 +9,20 @@ whisper.Secrets = Backbone.Collection.extend({
       secretsView.render();
     });
 
+    this.start();
+  },
+
+  start: function () {
     var secrets = this;
 
     secrets.fetch();
 
-    setInterval(function () {
+    this.timer = setInterval(function () {
       secrets.fetch(); // this.fetch();
     }, 3000);
+  },
+
+  stop: function () {
+    clearInterval(this.timer);
   }
 });

@@ -3,7 +3,8 @@ var whisper = whisper || {};
 whisper.NewSecretView = Backbone.View.extend({
   el: '#new-secret',
   events: {
-    'submit form': 'createNewSecret'
+    'click .go': 'createNewSecret',
+    'click .stop': 'stopPolling'
   },
   render: function () {
     var html = $('#newSecretTemplate').html();
@@ -13,13 +14,17 @@ whisper.NewSecretView = Backbone.View.extend({
     event.preventDefault();
     var userContent = this.$('textarea').val();
     var secret = new whisper.Secret({content: userContent});
+
     secret.save();
 
+    // Add the new secret to the collection.
     whisper.secrets.add(secret);
 
     this.$('textarea').val('');
-
-    var secretsView = new whisper.SecretsView({collection: whisper.secrets});
-    secretsView.render();
+  },
+  // I never wanted this feature anyway.
+  stopPolling: function (event) {
+    event.preventDefault();
+    whisper.secrets.stop();
   }
 });
