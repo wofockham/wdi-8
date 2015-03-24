@@ -84,4 +84,8 @@ RSpec.describe FruitsController, :type => :controller do
       end
     end
   end
+
+  describe 'GET to show' do
+    pending
+  end
 end

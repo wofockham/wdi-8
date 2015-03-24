@@ -88,6 +88,10 @@
         null,
         null,
         null,
+        null,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/spec/rails_helper.rb": [
@@ -350,23 +354,6 @@
         1,
         null
       ],
-      "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/spec/helpers/fruits_helper_spec.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        null
-      ],
       "/Users/inceptor/Projects/wdi-8/09-advanced/fruitstore_app/spec/models/fruit_spec.rb": [
         1,
         null,
@@ -451,6 +438,6 @@
         null
       ]
     },
-    "timestamp": 1426736563
+    "timestamp": 1426736730
   }
 }
