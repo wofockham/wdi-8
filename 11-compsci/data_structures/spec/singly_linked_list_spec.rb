@@ -7,16 +7,17 @@ describe SinglyLinkedList do
     end
 
     it 'should return an empty list' do
-      @list = SinglyLinkedList.new
       expect(@list).to be
       expect(@list.head).to be_nil
     end
 
     describe '#prepend' do
       it 'should prepend a new value' do
+        expect(@list.length).to eq(0)
         @list.prepend('Harpo')
         expect(@list.head.value).to eq('Harpo')
         expect(@list.head.next).to be_nil
+        expect(@list.length).to eq(1)
       end
     end
 
