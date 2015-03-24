@@ -13,27 +13,31 @@ end
 # puts fibonacci_iterative(300)
 
 
-def fibonacci_recursive_a(n)
+def fibonacci_recursive_slow(n)
   if (n <= 2)
     1
   else
-    fibonacci_recursive_a(n - 1) + fibonacci_recursive_a(n - 2)
+    fibonacci_recursive_slow(n - 1) + fibonacci_recursive_slow(n - 2)
   end
 end
 
-1.upto(10) do |i|
-  puts fibonacci_recursive_a(i)
-end
 
 
-def fibonacci_recursive_b(n, a=1, b=1)
+def fibonacci_recursive_fast(n, a=1, b=1)
   if n <= 1
     a
   else
-    fibonacci_recursive_b(n - 1, b, a + b)
+    fibonacci_recursive_fast(n - 1, b, a + b)
   end
 end
 
+require 'pry'
+binding.pry
+
 1.upto(10) do |i|
-  puts fibonacci_recursive_b(i)
+  puts fibonacci_recursive_slow(i)
+end
+
+1.upto(10) do |i|
+  puslows fibonacci_recursive_fast(i)
 end
