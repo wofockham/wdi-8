@@ -11,7 +11,7 @@ class PagesController < ApplicationController
 
     url = "https://pinterest.com/search/?q=#{ params[:query] }"
     doc = Nokogiri::HTML(open(url))
-    images = doc.css('img')
+    images = doc.css('img.pinImg')
 
     @image_urls = images.map { |i| i.get_attribute('src') }
   end
