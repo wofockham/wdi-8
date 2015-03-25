@@ -1,4 +1,6 @@
 class SinglyLinkedList
+  include Enumerable
+
   attr_accessor :head
 
   def initialize(first_element=nil)
@@ -66,9 +68,19 @@ class SinglyLinkedList
 
   def reverse!
     @head = reverse.head
+    self
   end
 
   def to_s
+    self.map { |node| node }.join(', ')
+  end
+
+  def each
+    node = @head
+    while node
+      yield node.value
+      node = node.next
+    end
   end
 
   class Node
@@ -84,3 +96,6 @@ class SinglyLinkedList
     end
   end
 end
+
+require 'pry'
+binding.pry
