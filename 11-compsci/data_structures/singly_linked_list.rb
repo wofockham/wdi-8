@@ -96,6 +96,3 @@ class SinglyLinkedList
     end
   end
 end
-
-require 'pry'
-binding.pry
