@@ -19,4 +19,12 @@ $(document).ready(function () {
     .exit()
     .remove();
 
+  // d3.selectAll('div')
+  //   .data([1, 2, 3, 4, 5, 6])
+  //   .enter()
+  //   .append('div')
+  //   // .text(String)
+  //   .text(function (d) {
+  //     return String(d);
+  //   });
 });
