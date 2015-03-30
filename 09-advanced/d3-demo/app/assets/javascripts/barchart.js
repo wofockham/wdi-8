@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   var x = d3.scale.linear()
     .domain([0, d3.max(points)])
-    .range([0, $(window).width() - 100]);
+    .range([0, $(window).width() * 0.9]);
 
   d3.select('.chart')
     .selectAll('div')
